@@ -46,12 +46,12 @@ www.baidu.com
       
         
         
-<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark-reasonable.min.css" name="highlight-style" mode="light">
 
       
         
         
-<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark-reasonable.min.css" name="highlight-style" mode="dark">
 
       
   
@@ -65,7 +65,7 @@ www.baidu.com
       pjax: true,
       lazyload: {
         enable: true,
-        only_post: 'false',
+        only_post: 'true',
         loading: '[object Object]'
       },
       donate: {
@@ -129,8 +129,20 @@ www.baidu.com
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
+
 <body class="lock-screen">
+
+<!--鼠标点击烟花爆炸效果，需要引入jQuery-->
+
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+
+
   <div class="loading"></div>
+
+  <!--顶部选项-->
+  
   
     
 
@@ -160,6 +172,8 @@ www.baidu.com
   </nav>
 
   
+
+  <!--导航菜单-->
   
 
 <nav class="menu">
@@ -185,6 +199,12 @@ www.baidu.com
     
   </div>
 </nav>
+
+<!-- 雪花特效 -->
+
+
+ <!--博客上方-->
+
   <main id="main">
   <div class="article-wrap">
     <div class="row container">
@@ -192,7 +212,7 @@ www.baidu.com
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/theme/preview1.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img src="/images/theme/preview1.gif" draggable="false">
   <div class="head-mask">
     <h1 class="head-title">我的第一篇博客</h1>
     <div class="head-info">
@@ -240,6 +260,31 @@ www.baidu.com
     </div>
   </div>
 </main>
+
+ <!--博文显示下方-->
+ 
+  <!--代码雨-->
+  
+        <!-- 数字雨 -->              
+         <!--宽度="1440" 高度="250"-->
+        <canvas id="code_rain_canvas" width="1440" height="250"></canvas>
+        <script type="text/javascript" src="/js/code_rain.js">
+          <style>
+              #code_rain_canvas {
+                position: fixed;  <!--位置：固定。-->
+                right: 0px;  <!--右边-->
+                bottom: 0px;  <!--底部-->
+                min-width: 100%;  <!--最小宽度-->
+                min-height: 100%;  <!--最小高度-->
+                height: auto;  <!--高度：自动-->
+                width: auto;  <!--宽度: 自动-->
+                z-index: 4;   <!--索引--->
+              }
+          </style>
+      </script>
+  
+
+  <!--社交链接-->
   
 
 <footer class="footer">
@@ -276,6 +321,8 @@ www.baidu.com
     <div class="footer-copyright"><a target="_blank" href="https://hexo.io">Hexo</a> - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
   
 </footer>
+
+  <!--右下方功能图标-->
   
       <div class="fab fab-plus">
     <i class="iconfont iconplus"></i>
@@ -286,16 +333,22 @@ www.baidu.com
     <i class="iconfont iconcaret-up"></i>
   </div>
   
+
+  <!--未知-->
   
     <div class="scrollbar j-scrollbar">
   <div class="scrollbar-current j-scrollbar-current"></div>
 </div>
   
+
+  <!--黑夜模式-->
   
     
 <script src="/js/color-mode.js"></script>
 
   
+  
+  <!--未知-->
   
     <div class="search">
   <div class="search-container">
@@ -311,7 +364,9 @@ www.baidu.com
   </div>
 </div>
   
-</body>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hk416_3401.model.json"},"display":{"position":"left","width":180,"height":265},"mobile":{"show":false},"rect":{"opacity":0.7},"log":false});</script></body>
+
 
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 
@@ -363,6 +418,7 @@ www.baidu.com
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
+
 
 
 

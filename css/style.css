@@ -6,9 +6,9 @@
   --color-text-secondary: #4e4e4e;
   --color-text-third: #999;
   --color-border: #eee;
-  --background-image: url("");
+  --background-image: url("/images/theme/D2_light.gif");
   --loading-image: url("/images/theme/log-light.gif");
-  --lazyload-image: url("/images/theme/loading.gif");
+  --lazyload-image: url("/images/theme/log-light.gif");
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -22,9 +22,9 @@
     --color-text-secondary: #9899ab;
     --color-text-third: #7d8594;
     --color-border: #2b3038;
-    --background-image: url("");
+    --background-image: url("/images/theme/D2_dark.gif");
     --loading-image: url("/images/theme/log-dark.gif");
-    --lazyload-image: url("/images/theme/loading.gif");
+    --lazyload-image: url("/images/theme/log-dark.gif");
   }
 }
 [color-mode='dark'] {
@@ -35,9 +35,9 @@
   --color-text-secondary: #9899ab;
   --color-text-third: #7d8594;
   --color-border: #2b3038;
-  --background-image: url("");
+  --background-image: url("/images/theme/D2_dark.gif");
   --loading-image: url("/images/theme/log-dark.gif");
-  --lazyload-image: url("/images/theme/loading.gif");
+  --lazyload-image: url("/images/theme/log-dark.gif");
 }
 [color-mode='dark'] .tags a {
   color: var(--color-text) !important;
